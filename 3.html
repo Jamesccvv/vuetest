@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件</title>
+    <script src="./lib/vue.min.js"></script>
+</head>
+<style>
+    .red {
+        color: #ff859b
+    }
+</style>
+<body>
+<div id="app">
+    <p :class="['red']">{{msg}}</p>
+    <p :class="{red:flag}">{{msg}}</p>
+
+
+    <p :style="[styleOb]">{{msg}}</p>
+    <input type="text" v-model="msg">
+
+    <p v-for="(item,i) in list">{{item}}---{{i}}</p>
+
+
+
+    <p v-for="(item,i) in list1" :key="i"><input type="checkbox">{{item.name}}</p>
+
+
+</div>
+
+</body>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            msg: '猥琐发育，别浪～～～',
+            flag: false,
+            styleOb: {color: 'pink', 'font-size': '50px'},// 有横线的必须加引号
+            list: [1, 2, 3, 4, 5, 6],
+            list1: [
+                {id:1,name:'james'},
+                {id:2,name:'java'},
+                {id:2,name:'php'},
+            ],
+        },
+        methods: {}
+    });
+</script>
+</html>

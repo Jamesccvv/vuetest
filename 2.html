@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./lib/vue.min.js"></script>
+</head>
+
+<body>
+<div id="app">
+    <input type="button" value="浪" v-on:click="run">
+    <input type="button" value="低调" @click="stop">
+    <p>{{msg}}</p>
+</div>
+</body>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            msg: '猥琐发育，别浪～～～',
+            intervalId: null,
+        },
+        methods: {
+            show: function () {
+                alert('hello')
+            },
+            run() {
+                // var _this = this;
+                //function() {}  = ()=>{}  箭头函数解决内部this 问题
+                // setInterval(function(){
+                //     var star = _this.msg.substring(0,1);
+                //     var end = _this.msg.substring(1);
+                //     _this.msg = end+star;
+                // },400);
+                // if (this.intervalId != null){
+                //     return;
+                // }
+                if (this.intervalId != null) {
+                    clearInterval(this.intervalId);
+                    this.intervalId = null;
+                    return;
+                }
+
+                this.intervalId = setInterval(() => {
+                    var star = this.msg.substring(0, 1);
+                    var end = this.msg.substring(1);
+                    this.msg = end + star;
+                }, 400);
+            },
+
+            stop() {
+                clearInterval(this.intervalId);
+                this.intervalId = null;
+            }
+        }
+    });
+</script>
+</html>

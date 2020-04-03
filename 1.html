@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./lib/vue.min.js"></script>
+</head>
+
+<body>
+<div id="app">
+    <p>{{msg}}</p>
+    <div v-text="msg2"></div>
+    <div v-html="msg2" v-bind:title="mytitle"></div>
+    <div v-html="msg2" :title="mytitle + ' james'"></div>
+
+    <input type="text" value="click" v-on:click="show">
+
+</div>
+</body>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            msg:'test',
+            msg2:'<h1>这是个html</h1>',
+            mytitle:'my title'
+        },
+        methods:{
+            show:function(){
+                alert('hello')
+            }
+        }
+    });
+</script>
+</html>
