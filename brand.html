@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="./lib/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue-resource/1.5.1/vue-resource.min.js"></script>
 </head>
 
 <body>
@@ -51,6 +52,9 @@
 </div>
 </body>
 <script>
+// 配置全局域名get libuneng yong /
+Vue.http.options.root='https://douban.uieee.com/';
+Vue.http.options.emulateJSON=true;
     var vm = new Vue({
         el: '#app',
         data: {
@@ -60,8 +64,12 @@
             words: '',
             list: [
                 {id: 1, name: '奔驰', ctime: new Date()},
-                {id: 2, name: '保时捷', ctime: new Date()}]
+                {id: 2, name: '保时捷', ctime: new Date()}],
         },
+        // 创建完自动调用方法
+         created(){
+            this.getAllList();
+         },
         methods: {
             del(id) {
                 // this.list.some((item, i) => {
@@ -96,6 +104,18 @@
                 });
 
                 return newList;
+            },
+            getAllList(){
+                this.$http.get('v2/movie/weekly?apikey=0df993c66c0c636e29ecbb5344252a4a').then(result=>{
+                    console.log(result.body.subjects);
+                         
+                })
+
+                //application/json的请求 emulateJSON:true
+                // this.$http.post('https://douban.uieee.com/v2/movie/weekly?apikey=0df993c66c0c636e29ecbb5344252a4a',{name:'james'},{emulateJSON:true}).then(result=>{
+                //     console.log(result.body.subjects);
+                         
+                // })
             }
         }
     });
