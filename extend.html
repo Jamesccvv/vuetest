@@ -7,9 +7,9 @@
 </head>
 <body>
 <div id="app">
-  <mycom1></mycom1>  
+    <mycom1></mycom1>
 
-  <login></login> 
+    <login></login>
 </div>
 
 
@@ -21,39 +21,36 @@
 </body>
 <script>
 
-// 组件
- // var com1=Vue.extend({
- //    template:'<div>这是组件1</div>'
- // });
+    // 组件
+    // var com1=Vue.extend({
+    //    template:'<div>这是组件1</div>'
+    // });
 
- // Vue.component('mycom1',com1);
- // 
- 
-// Vue.component('mycom1',Vue.extend({
-//     template:'<div>这是组件1</div>'
-//  }));
+    // Vue.component('mycom1',com1);
+    //
 
-
-// Vue.component('mycom1',{
-//     template:'<div>这是组件1</div>'
-//  });
+    // Vue.component('mycom1',Vue.extend({
+    //     template:'<div>这是组件1</div>'
+    //  }));
 
 
-Vue.component('mycom1',{
-    template:'#tpm1', //指向模板
-    //template:'<div>这是组件1--{{msg}}</div>',
-    data:function(){ //一定要在内部 return 对象 防止影响
-        return {msg:'组件似有message'};
-    },
-    methods:{
-        add(){
+    // Vue.component('mycom1',{
+    //     template:'<div>这是组件1</div>'
+    //  });
 
+    // 全局组件
+    Vue.component('mycom1', {
+        template: '#tpm1', //指向模板
+        //template:'<div>这是组件1--{{msg}}</div>',
+        data: function () { //一定要在内部 return 对象 防止影响
+            return {msg: '组件似有message'};
+        },
+        methods: {
+            add() {
+
+            }
         }
-    }
- });
-
-
-
+    });
 
     var vm = new Vue({
         el: '#app',
@@ -65,10 +62,11 @@ Vue.component('mycom1',{
                 alert('hello')
             }
         },
+
         // 私有组件
-        components:{
-            login:{
-                template:'<div>这是私有组件</div>'
+        components: {
+            login: {
+                template: '<div>这是私有组件</div>'
             }
         }
 
