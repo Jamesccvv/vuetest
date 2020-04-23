@@ -36,6 +36,10 @@
          <h3 v-show="flag">{{msg}}</h3>
     </transition>
     <input type="button" value="toggle" @click="flag=!flag">
+
+    <!--默认是个span标签-->
+    <transition-group tag="ul"></transition-group>
+
 </div>
 </body>
 <script>
