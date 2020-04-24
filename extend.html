@@ -10,6 +10,7 @@
     <mycom1></mycom1>
 
     <login></login>
+    <mylogin></mylogin>
 </div>
 
 
@@ -52,6 +53,13 @@
         }
     });
 
+
+    // 对象方式传递
+    var mylogin = {
+        template: '<h1>mylogin组件</h1>'
+    };
+
+    Vue.component('myLogin', mylogin);
     var vm = new Vue({
         el: '#app',
         data: {
@@ -67,7 +75,9 @@
         components: {
             login: {
                 template: '<div>这是私有组件</div>'
-            }
+            },
+            // 简写
+            mylogin
         }
 
     });

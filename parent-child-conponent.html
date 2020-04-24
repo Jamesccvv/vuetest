@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./lib/vue.js"></script>
+</head>
+<style type="text/css">
+    .v-enter, .v-leave-to {
+        opacity: 0;
+        transform: translate(150px)
+    }
+
+    .v-enter-active, .v-leave-active {
+
+        transition: all .25s ease;
+    }
+
+    .my-enter, .my-leave-to {
+        opacity: 0;
+        transform: translateY(50px)
+    }
+
+    .my-enter-active, .my-leave-active {
+
+        transition: all .25s ease;
+    }
+</style>
+<body>
+<div id="app">
+    <!--通过福组件v-bind的方式传递   如果想用必须在子组件中定义 props-->
+    <com1 v-bind:parentmsg="msg"></com1>
+</div>
+
+</body>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            msg: '1232父组件的数据'
+        },
+        methods: {},
+        components: {
+            data() {
+                return {
+                    'name': 123
+                }
+            },
+            com1: {
+                template: '<h2 @click.prevent="change">子组件---{{parentmsg}}</h2>',
+                props: ['parentmsg'],
+                methods: {
+                    change() {
+                        this.parentmsg = '修改了' // 不建议这样修改，一般props 只读 data可读写
+                    }
+                }
+            }
+        }
+    });
+</script>
+</html>
