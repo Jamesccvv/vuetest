@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./lib/vue.min.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+<style type="text/css">
+    .v-enter, .v-leave-to {
+        opacity: 0;
+        transform: translate(150px)
+    }
+
+    .v-enter-active, .v-leave-active {
+
+        transition: all .25s ease;
+    }
+
+    .my-enter, .my-leave-to {
+        opacity: 0;
+        transform: translateY(50px)
+    }
+
+    .my-enter-active, .my-leave-active {
+
+        transition: all .25s ease;
+    }
+</style>
+<body>
+<!--Ctrl + Shift + /-->
+<div id="app">
+    <!--    <a href="#/login">登录</a>
+        <a href="#/register">注册</a>-->
+
+    <!--    <router-link to="/login?id=1" tag="span">登录</router-link>-->
+    <!--    <router-link to="/login" tag="span">登录</router-link>-->
+    <!--<router-link to="/register">注册</router-link>-->
+    <router-link to="/account">account</router-link>
+
+    <!--占位符-->
+    <!--<transition name="slide">-->
+    <router-view></router-view>
+    <!--</transition>-->
+
+
+
+</div>
+
+<template id="temp">
+    <div>
+        <h1>account 组件组件</h1>
+         <router-link to="/account/register">子注册</router-link>
+         <router-link to="/account/login">子登录</router-link>
+         <router-view></router-view>
+    </div>
+</template>
+
+</body>
+<script>
+
+    var account = {
+        //template: '<div>登录组件---{{$route.query.id}}</div>',
+        template: '#temp',
+        // created() {
+        //     console.log(this.$route);
+        // },
+        data() {
+            return {
+                msg: 123
+            }
+        }
+    };
+
+    var register = {template: '<div>注册组件</div>'};
+    var login = {template: '<div>登录组件</div>'};
+    // 实例化
+    var routeOb = new VueRouter({
+        //route
+        routes: [
+            //{path: '/', component: login},// 默认
+            //{path: '/', redirect: '/login'},// 默认
+            // //{path: '/login', component: login},
+            {
+                path: '/account',
+                component: account,
+                children: [
+                    {path: 'login', component: login},
+                    {path: 'register', component: register}
+                ]
+            },
+            // {path: '/register', component: register}
+        ],
+        linkActiveClass: 'active', // 激活类
+
+
+    });
+    var vm = new Vue({
+        el: '#app',
+        data: {},
+        methods: {},
+        router: routeOb // 注册对象
+    });
+</script>
+</html>

@@ -33,7 +33,8 @@
     <!--    <a href="#/login">登录</a>
         <a href="#/register">注册</a>-->
 
-    <router-link to="/login" tag="span">登录</router-link>
+<!--    <router-link to="/login?id=1" tag="span">登录</router-link>-->
+    <router-link to="/login/1" tag="span">登录</router-link>
     <router-link to="/register">注册</router-link>
 
     <!--占位符-->
@@ -45,7 +46,18 @@
 </body>
 <script>
 
-    var login = {template: '<div>登录组件</div>'};
+    var login = {
+        //template: '<div>登录组件---{{$route.query.id}}</div>',
+        template: '<div>登录组件---{{$route.params.id}}</div>',
+        created() {
+            console.log(this.$route);
+        },
+        data() {
+            return {
+                msg: 123
+            }
+        }
+    };
     var register = {template: '<div>注册组件</div>'};
     // 实例化
     var routeOb = new VueRouter({
@@ -53,7 +65,8 @@
         routes: [
             //{path: '/', component: login},// 默认
             {path: '/', redirect: '/login'},// 默认
-            {path: '/login', component: login},
+            //{path: '/login', component: login},
+            {path: '/login/:id', component: login},
             {path: '/register', component: register}
         ],
         linkActiveClass: 'active', // 激活类
