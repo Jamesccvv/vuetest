@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./lib/vue.min.js"></script>
+</head>
+<style type="text/css">
+    .v-enter, .v-leave-to {
+        opacity: 0;
+        transform: translate(150px)
+    }
+
+    .v-enter-active, .v-leave-active {
+
+        transition: all .25s ease;
+    }
+
+    .my-enter, .my-leave-to {
+        opacity: 0;
+        transform: translateY(50px)
+    }
+
+    .my-enter-active, .my-leave-active {
+
+        transition: all .25s ease;
+    }
+</style>
+<body>
+<div id="app">
+    <!--  v-on:func='show' 传递方法  -->
+    <com2 @func="show"></com2>
+</div>
+
+<template id="tmp2">
+    <div>
+        <h1>这是子组件</h1>
+        <input type="button" value="调用父组件" @click="myclick">
+    </div>
+</template>
+</body>
+<script>
+    // 定义一个模板对象
+    var com2 = {
+        template: '#tmp2',
+        // 组件里的dada  是个 function
+        data() {
+            return {
+                sonmsg: {name: 'james'}
+            }
+        },
+        methods: {
+            // 调用父组件的方法
+            myclick() {
+                //$emit 代表触发意思
+                this.$emit('func', this.sonmsg)
+            }
+        }
+    };
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            datafromsun: null
+        },
+        methods: {
+            show(data) {
+                //console.log('调用了父组件方法' + data)
+                //console.log(data)
+                this.datafromsun = data;
+            }
+        },
+        components: {
+            com2
+        }
+    });
+</script>
+</html>
