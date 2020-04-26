@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a8f22b0-b96a-4eba-b2e9-30884316b99c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/refs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/router.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pc-value.html" beforeDir="false" afterPath="$PROJECT_DIR$/pc-value.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temple.html" beforeDir="false" afterPath="$PROJECT_DIR$/temple.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,11 +26,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/refs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="65" column="53" selection-start-line="65" selection-start-column="47" selection-end-line="65" selection-end-column="53" />
+            <state relative-caret-position="109">
+              <caret line="46" column="16" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/temple.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="75" selection-start-line="6" selection-start-column="75" selection-end-line="6" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/router.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="75" selection-start-line="6" selection-start-column="75" selection-end-line="6" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -49,6 +67,8 @@
         <option value="$PROJECT_DIR$/parent-child-conponent.html" />
         <option value="$PROJECT_DIR$/pc-value.html" />
         <option value="$PROJECT_DIR$/refs.html" />
+        <option value="$PROJECT_DIR$/temple.html" />
+        <option value="$PROJECT_DIR$/router.html" />
       </list>
     </option>
   </component>
@@ -91,7 +111,7 @@
   <component name="PropertiesComponent">
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../www 快捷方式/tech_center_back" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../www 快捷方式/sfabric_back" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
@@ -132,12 +152,12 @@
       <workItem from="1587021782195" duration="1671000" />
       <workItem from="1587637710662" duration="4040000" />
       <workItem from="1587720550802" duration="4875000" />
-      <workItem from="1587862007979" duration="7554000" />
+      <workItem from="1587862007979" duration="9580000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26151000" />
+    <option name="totallyTimeSpent" value="28177000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="1920" height="1011" extended-state="6" />
@@ -156,7 +176,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2043379" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.23287672" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -247,8 +267,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/refs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="65" column="53" selection-start-line="65" selection-start-column="47" selection-end-line="65" selection-end-column="53" />
+        <state relative-caret-position="109">
+          <caret line="46" column="16" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temple.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="75" selection-start-line="6" selection-start-column="75" selection-end-line="6" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/router.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="75" selection-start-line="6" selection-start-column="75" selection-end-line="6" selection-end-column="75" />
         </state>
       </provider>
     </entry>
