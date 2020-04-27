@@ -64,7 +64,12 @@
         el: '#app',
         data: {},
         methods: {},
-        router: routeOb // 注册对象
+        router: routeOb, // 注册对象,
+        watch: {
+            '$route.path': function (newval, oldval) {
+                console.log(newval + '--' + oldval)
+            }
+        }
     });
 </script>
 </html>

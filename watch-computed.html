@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./lib/vue.min.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<style type="text/css">
+    .v-enter, .v-leave-to {
+        opacity: 0;
+        transform: translate(150px)
+    }
+
+    .v-enter-active, .v-leave-active {
+
+        transition: all .25s ease;
+    }
+
+    .my-enter, .my-leave-to {
+        opacity: 0;
+        transform: translateY(50px)
+    }
+
+    .my-enter-active, .my-leave-active {
+
+        transition: all .25s ease;
+    }
+</style>
+<body>
+<div id="app">
+    <input type="text" v-model="firstname">
+    <input type="text" v-model="lastname">
+    <input type="text" v-model="fullname">
+
+    <p>{{fullname}}</p>
+</div>
+</body>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            firstname: '',
+            lastname: '',
+            //fullname: ''
+        },
+        methods: {},
+        // watch: {
+        //     'firstname': function (newVal, oldVal) { // firstname 有引号必须加引号
+        //         // console.log('见识到了')
+        //         this.fullname = this.firstname + '-' + this.lastname;
+        //     }
+        // },
+        // 计算属性 不要加小括号去调用
+        computed:{
+            'fullname':function(){
+                return this.firstname + '-' + this.lastname;
+            }
+        }
+    });
+</script>
+</html>
