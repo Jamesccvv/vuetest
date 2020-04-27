@@ -29,7 +29,7 @@
 <body>
 <div id="app">
     <!--通过福组件v-bind的方式传递   如果想用必须在子组件中定义 props-->
-    <com1 v-bind:parentmsg="msg"></com1>
+    <com1 v-bind:parentmsg="msg" @func="test"></com1>
 </div>
 
 </body>
@@ -37,9 +37,14 @@
     var vm = new Vue({
         el: '#app',
         data: {
-            msg: '1232父组件的数据'
+            msg: '1232父组件的数据',
+            msgfromsun: ''
         },
-        methods: {},
+        methods: {
+            test(data) {
+                this.msgfromsun = data;
+            }
+        },
         components: {
             data() {
                 return {
