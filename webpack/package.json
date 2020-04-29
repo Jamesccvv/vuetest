@@ -8,6 +8,7 @@
     "node_modules"
   ],
   "dependencies": {
+    "html-webpack-plugin": "^4.2.1",
     "jquery": "^3.5.0"
   },
   "name": "webpack",
@@ -20,7 +21,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --open --port 3000 --hot"
+    "dev": "webpack-dev-server --open --port 3000 --hot",
+    "dev2": "webpack-dev-server"
   },
   "keywords": [],
   "author": "",
