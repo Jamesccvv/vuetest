@@ -1,6 +1,11 @@
 
 import $ from 'jquery';
 
+// 导入css
+import '../css/index.css'
+
+// webpack 默认只能打包js 文件
+
 $(function(){
     $('ul>li:odd').css('color','pink');
     $('ul>li:even').css('background','red');
@@ -17,3 +22,5 @@ $(function(){
 // --open 代表打开浏览器 --port 3000 端口  --contentBase src 可以直接打开这个目录 --hot 热更新追加方式
 
 // npm i html-webpack-plugin  页面缓存插件
+
+//如果处理非js安装 npm i style-loader css-loader -D   配置匹配规则    webpack.config.js

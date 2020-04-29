@@ -26,5 +26,10 @@ module.exports = {
             //filename:'index1.html' // 生成内存中的
             filename:'index.html' // 生成内存中的
         })
-    ]
+    ],
+    module: {
+       rules:[
+           {test:/\.css$/,use:['style-loader','css-loader']}
+       ]
+    }
 };
