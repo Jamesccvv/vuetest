@@ -16,15 +16,20 @@ module.exports = {
         open: true,
         port: 3000,
         hot: true,
-        contentBase: 'src'
+        //contentBase: 'src'
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-
+        // new webpack.optimize.UglifyJsPlugin({
+        //     compress: {
+        //         drop_debugger: true,
+        //     }
+        // }),
         new htmlWebpackPlugin({
             template: path.join(__dirname, 'index.html'),// 指定
             //filename:'index1.html' // 生成内存中的
-            filename: 'index.html' // 生成内存中的
+            filename: 'index.html', // 生成内存中的
+            hash:true,
         })
     ],
     module: {

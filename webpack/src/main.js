@@ -49,8 +49,9 @@ $(function(){
 //  }
 
 
-// class Person {
-//     static info = {name: 'james', age: 20}
-// }
-//
-// var p1 = new Person();
+class Person {
+    static info = {name: 'james', age: 20}
+}
+console.log(Person.info.name);
+// console.log(Person.info);
+//var p1 = new Person();
