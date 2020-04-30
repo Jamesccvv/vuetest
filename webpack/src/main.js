@@ -30,3 +30,5 @@ $(function(){
 // 安装能处理less 包  npm i less -D   npm i less-loader -D
 
 // 安装scss   npm i sass-loader -D   npm i node-sass -D 下载很慢
+
+// 安装 css 中的涉及url 地址     npm i url-loader  file-loader -D  并建立匹配规则
