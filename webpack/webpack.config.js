@@ -16,20 +16,22 @@ module.exports = {
         open: true,
         port: 3000,
         hot: true,
-        contentBase:'src'
+        contentBase: 'src'
     },
-    plugins:[
+    plugins: [
         new webpack.HotModuleReplacementPlugin(),
 
         new htmlWebpackPlugin({
-            template:path.join(__dirname,'index.html'),// 指定
+            template: path.join(__dirname, 'index.html'),// 指定
             //filename:'index1.html' // 生成内存中的
-            filename:'index.html' // 生成内存中的
+            filename: 'index.html' // 生成内存中的
         })
     ],
     module: {
-       rules:[
-           {test:/\.css$/,use:['style-loader','css-loader']}
-       ]
+        rules: [
+            {test: /\.css$/, use: ['style-loader', 'css-loader']},// 从右到左调用  loader 根据webpack版本不同 1可以不带其余的必须带
+            {test: /\.less$/, use: ['style-loader', 'css-loader', 'less-loader']},
+            {test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader']}
+        ]
     }
 };

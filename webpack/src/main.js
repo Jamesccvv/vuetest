@@ -3,6 +3,8 @@ import $ from 'jquery';
 
 // 导入css
 import '../css/index.css'
+import '../css/index.less'
+import '../css/index.scss'
 
 // webpack 默认只能打包js 文件
 
@@ -24,3 +26,7 @@ $(function(){
 // npm i html-webpack-plugin  页面缓存插件
 
 //如果处理非js安装 npm i style-loader css-loader -D   配置匹配规则    webpack.config.js
+
+// 安装能处理less 包  npm i less -D   npm i less-loader -D
+
+// 安装scss   npm i sass-loader -D   npm i node-sass -D 下载很慢
