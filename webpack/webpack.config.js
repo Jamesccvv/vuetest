@@ -32,8 +32,10 @@ module.exports = {
             {test: /\.css$/, use: ['style-loader', 'css-loader']},// 从右到左调用  loader 根据webpack版本不同 1可以不带其余的必须带
             {test: /\.less$/, use: ['style-loader', 'css-loader', 'less-loader']},
             {test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader']},
-            {test: /\.(jpg|png)$/, use: 'url-loader?limit=200'} // 处理图片路径
+            {test: /\.(jpg|png)$/, use: 'url-loader?limit=200'}, // 处理图片路径
             // 支持参数 什么时候转base64  &[hash:8]-name=[name].[ext] 保持原有的图片名，防止重复,连接个hash值也可以防止重复
+
+            {test: /\.(ttf|eot|woff|woff2)$/, use: 'url-loader'}, // 处理字体
         ]
     }
 };

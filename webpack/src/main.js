@@ -6,6 +6,10 @@ import '../css/index.css'
 import '../css/index.less'
 import '../css/index.scss'
 
+
+// 如果是引用node_modules 可以不加目录
+import 'bootstrap/dist/css/bootstrap.css'
+
 // webpack 默认只能打包js 文件
 
 $(function(){
