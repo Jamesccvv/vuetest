@@ -36,6 +36,7 @@ module.exports = {
             // 支持参数 什么时候转base64  &[hash:8]-name=[name].[ext] 保持原有的图片名，防止重复,连接个hash值也可以防止重复
 
             {test: /\.(ttf|eot|woff|woff2)$/, use: 'url-loader'}, // 处理字体
+            {test:/\.js$/,use:'babel-loader',exclude:/node_model/}
         ]
     }
 };

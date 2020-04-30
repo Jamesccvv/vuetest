@@ -8,23 +8,28 @@
     "node_modules"
   ],
   "dependencies": {
-    "html-webpack-plugin": "^4.2.1",
-    "jquery": "^3.5.0"
-  },
-  "name": "webpack",
-  "version": "1.0.0",
-  "main": "webpack.config.js",
-  "devDependencies": {
     "bootstrap": "^4.4.1",
+    "html-webpack-plugin": "^4.2.1",
+    "jquery": "^3.5.0",
+    "popper.js": "^1.16.1",
+    "webpack": "^4.43.0"
+  },
+  "private": true,
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^3.5.3",
     "file-loader": "^6.0.0",
     "less": "^3.11.1",
     "less-loader": "^6.0.0",
     "node-sass": "^4.14.0",
+    "npm": "^6.14.4",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
     "url-loader": "^4.1.0",
-    "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   },
@@ -32,9 +37,5 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --open --port 3000 --hot",
     "dev2": "webpack-dev-server"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  }
 }
