@@ -5,8 +5,13 @@
 import Vue from 'vue';   // You are using the runtime-only  默认加载runtime-only
 //import Vue from '../node_modules/vue/dist/vue.js'   // 一种写法
 // webpack.cofig.js 中配置路径
-//  npm i vue-loader vue-template-complier -D   导入并定义一个vue 结尾的  template script style
+//  npm i vue-loader  -D  npm install vue-template-compiler   导入并定义一个vue 结尾的  template script style
 
+// 配置 webpack.config.js
+//
+//
+//
+// const VueLoaderPlugin = require('vue-loader/lib/plugin'); new VueLoaderPlugin(),  匹配规则 {test:/\.vue$/,use:['vue-loader'],exclude:/node_modules/}
 // 配置匹配规则
 import login from './login.vue';
 // es6 中使使用 import 暴露成员  import 模块 from '模块标识符'  export default  向外暴露成员  export default  info  几首必须用info
@@ -18,4 +23,4 @@ var vm = new Vue({
     },
     render: c => c(login)
 
-})
+});

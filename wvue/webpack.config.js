@@ -1,5 +1,5 @@
 const path = require('path');
-
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 // 启用自动打包的第二种方式
 const webpack = require('webpack');
 
@@ -20,6 +20,7 @@ module.exports = {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
+        new VueLoaderPlugin(),
         // new webpack.optimize.UglifyJsPlugin({
         //     compress: {
         //         drop_debugger: true,
@@ -42,12 +43,7 @@ module.exports = {
 
             {test: /\.(ttf|eot|woff|woff2)$/, use: 'url-loader'}, // 处理字体
             {test:/\.js$/,use:'babel-loader',exclude:/node_modules/},
-            {test:/\.vue$/,use:['vue-loader']}
+            {test:/\.vue$/,use:['vue-loader'],exclude:/node_modules/}
         ]
-    },
-    // resolve:{
-    //     alias:{
-    //         'vue$':"vue/dist/vue.js"
-    //     }
-    // }
+    }
 };
