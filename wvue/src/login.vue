@@ -4,18 +4,17 @@
     </div>
 </template>
 
-<script>
-    export default {
-        data() {
-            return {}
-        }
-        ,
-        methods: {
-            show() {
-                console.log('调用了show');
-            }
-        }
-    }
-
-</script>
+<!--<script>-->
+    <!--export default {-->
+        <!--data() {-->
+            <!--return {}-->
+        <!--}-->
+        <!--,-->
+        <!--methods: {-->
+            <!--show() {-->
+                <!--console.log('调用了show');-->
+            <!--}-->
+        <!--}-->
+    <!--}-->
+<!--</script>-->
 <style></style>
