@@ -29,14 +29,15 @@
              });
          },
          getList(){
+
              this.show();
              setTimeout(()=>{
                      this.toastinit.close()
                  }
              ,1000);
-
+             // var that = this // 解决
              // setTimeout(function () {
-             //     this.toastinit.close()// this 会改变作用域所以使用箭头函数
+             //     that.toastinit.close()// this 会改变作用域所以使用箭头函数
              // },2000)
          }
      }
