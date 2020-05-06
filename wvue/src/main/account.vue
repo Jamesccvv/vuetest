@@ -15,6 +15,12 @@
     }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+    /*普通标签只支持普通的如果要启用 scss,less 要启用lang 属性  一般都加scoped 属性作用域*/
+body{
+    div{
+        font-style: italic;
+        color:pink;
+    }
+}
 </style>
