@@ -16,7 +16,7 @@ import login from './login.vue';
 
 /*************************路由相关*********************************/
 // 安装并导入  npm install vue-router
-import VueRouter from 'vue-router'
+ import VueRouter from 'vue-router'
 
 
 import account from './main/account.vue';
@@ -27,19 +27,21 @@ import subLogin from './subcom/login.vue';
 import subRegister from './subcom/register.vue';
 
 Vue.use(VueRouter);
-var router = new VueRouter({
-    routes: [
-        {
-            path: '/account', component: account,
-            children: [
-                {path: 'subLogin', component: subLogin},
-                {path: 'subRegister', component: subRegister}
-            ]
-        },
-        {path: '/goodsList', component: goodsList}
-    ]
-});
+// var router = new VueRouter({
+//     routes: [
+//         {
+//             path: '/account', component: account,
+//             children: [
+//                 {path: 'subLogin', component: subLogin},
+//                 {path: 'subRegister', component: subRegister}
+//             ]
+//         },
+//         {path: '/goodsList', component: goodsList}
+//     ]
+// });
 
+
+import router from './router.js'
 
 var vm = new Vue({
     el: '#app',
