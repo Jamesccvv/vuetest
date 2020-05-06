@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a8f22b0-b96a-4eba-b2e9-30884316b99c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8a8f22b0-b96a-4eba-b2e9-30884316b99c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/webpack/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="245">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+              <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
               <folding>
                 <element signature="e#34#59#0" expanded="true" />
               </folding>
@@ -149,7 +147,7 @@
             <path>
               <item name="vuetest" type="b2602c69:ProjectViewProjectNode" />
               <item name="vuetest" type="462c0819:PsiDirectoryNode" />
-              <item name="webpack" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -206,17 +204,17 @@
       <workItem from="1587965967048" duration="3823000" />
       <workItem from="1588239605623" duration="567000" />
       <workItem from="1588240183828" duration="2879000" />
-      <workItem from="1588726748856" duration="599000" />
+      <workItem from="1588726748856" duration="890000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50157000" />
+    <option name="totallyTimeSpent" value="50448000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="26" width="1920" height="1011" extended-state="7" />
+    <frame x="0" y="26" width="1920" height="1011" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49723756" visible="true" weight="0.20895523" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49723756" visible="true" weight="0.20895523" />
       <window_info id="Structure" order="1" sideWeight="0.50276244" side_tool="true" weight="0.19189766" />
       <window_info id="Favorites" order="2" sideWeight="0.50114155" side_tool="true" weight="0.18976545" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -229,7 +227,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.44634703" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.44634703" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" />
@@ -439,7 +437,7 @@
     <entry file="file://$PROJECT_DIR$/webpack/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
           <folding>
             <element signature="e#34#59#0" expanded="true" />
           </folding>
