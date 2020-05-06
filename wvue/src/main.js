@@ -42,15 +42,15 @@ Vue.use(VueRouter);
 
 
 /****************导入mint-ui*********************/
-import MintUI from 'mint-ui'
-import 'mint-ui/lib/style.css'
-Vue.use(MintUI);// 安装到vue
+// import MintUI from 'mint-ui'
+// import 'mint-ui/lib/style.css'
+// Vue.use(MintUI);// 安装到vue
 
 
-
-
-
+// 按需导入   npm install babel-plugin-component -D
+import { Button, Cell } from 'mint-ui'
 import router from './router.js'
+Vue.component(Button.name, Button) // 注册
 
 var vm = new Vue({
     el: '#app',
