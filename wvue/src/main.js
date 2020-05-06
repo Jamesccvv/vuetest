@@ -1,7 +1,7 @@
 // 在webpack 中使用vue
 // 
 //  安装 vue npm i vue
-
+import 'bootstrap/dist/css/bootstrap.css'
 import Vue from 'vue';   // You are using the runtime-only  默认加载runtime-only
 //import Vue from '../node_modules/vue/dist/vue.js'   // 一种写法
 // webpack.cofig.js 中配置路径
@@ -39,6 +39,15 @@ Vue.use(VueRouter);
 //         {path: '/goodsList', component: goodsList}
 //     ]
 // });
+
+
+/****************导入mint-ui*********************/
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+Vue.use(MintUI);// 安装到vue
+
+
+
 
 
 import router from './router.js'
