@@ -6,7 +6,9 @@
         <mt-button plain type="primary">primary</mt-button>
         <mt-button icon="back">back</mt-button>
         <mt-button icon="more">更多</mt-button>
-        <buttion>213432</buttion>
+        <button type="button" class="mui-btn mui-btn-royal">
+            紫色
+        </button>
     </div>
 </template>
 

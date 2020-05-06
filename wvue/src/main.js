@@ -3,7 +3,7 @@
 //  安装 vue npm i vue
 import 'bootstrap/dist/css/bootstrap.css'
 import Vue from 'vue';   // You are using the runtime-only  默认加载runtime-only
-//import Vue from '../node_modules/vue/dist/vue.js'   // 一种写法
+//import Vue from '../node_modules/vue/mui/vue.js'   // 一种写法
 // webpack.cofig.js 中配置路径
 //  npm i vue-loader  -D  npm install vue-template-compiler   导入并定义一个vue 结尾的  template script style
 
@@ -50,7 +50,12 @@ Vue.use(VueRouter);
 // 按需导入   npm install babel-plugin-component -D
 import { Button, Cell } from 'mint-ui'
 import router from './router.js'
-Vue.component(Button.name, Button) // 注册
+Vue.component(Button.name, Button) // 注册   mui 相当于bootstrap  不能用npm 下载手动下载解压拷贝到项目中
+
+import '../lib/mui/css/mui.css'  // 导入css 样式
+
+
+
 
 var vm = new Vue({
     el: '#app',

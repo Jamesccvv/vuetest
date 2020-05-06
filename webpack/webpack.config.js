@@ -9,7 +9,7 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: path.join(__dirname, './src/main.js'),//入口
     output: {
-        path: path.join(__dirname, './dist'),
+        path: path.join(__dirname, './mui'),
         filename: 'bundle.js'
     },
     devServer: {
