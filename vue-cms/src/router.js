@@ -1,5 +1,10 @@
-
 import VueRouter from 'vue-router'
+
+
+import HomeContttainer from '../component/tabbar/HomeContainer.vue'
+import MemberContttainer from '../component/tabbar/MemberContainer.vue'
+import SearchContttainer from '../component/tabbar/SearchContainer.vue'
+import ShopCarContttainer from '../component/tabbar/ShopCarContainer.vue'
 
 var router = new VueRouter({
     routes: [
@@ -10,8 +15,12 @@ var router = new VueRouter({
         //         {path: 'subRegister', component: subRegister}
         //     ]
         // },
-        // {path: '/goodsList', component: goodsList}
-    ]
+        {path: '/home', component: HomeContttainer},
+        {path: '/member', component: MemberContttainer},
+        {path: '/shopcar', component: ShopCarContttainer},
+        {path: '/search', component: SearchContttainer}
+    ],
+    linkActiveClass: 'mui-active'
 });
 
 // es6 语法暴露对象
