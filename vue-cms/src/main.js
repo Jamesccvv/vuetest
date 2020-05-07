@@ -28,6 +28,7 @@ import VueResource from 'vue-resource'
 
 Vue.use(VueResource);
 
+Vue.http.options.emulateJSON=true;
 var vm = new Vue({
     el: '#app',
     render: c => c(App),
