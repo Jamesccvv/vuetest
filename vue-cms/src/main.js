@@ -26,8 +26,15 @@ Vue.component(Header.name, Header);
 
 import VueResource from 'vue-resource'
 
-Vue.use(VueResource);
 
+// 时间格式化npm i moment
+Vue.filter('dataFormat',function (dataStr,pattern="YYYY-MM-DD HH:mm:ss") {
+   return  moment(dataStr).format(pattern);
+})
+
+
+Vue.use(VueResource);
+Vue.http.options.root='https://douban.uieee.com/';
 Vue.http.options.emulateJSON=true;
 var vm = new Vue({
     el: '#app',

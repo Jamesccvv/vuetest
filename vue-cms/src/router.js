@@ -6,6 +6,9 @@ import MemberContttainer from '../component/tabbar/MemberContainer.vue'
 import SearchContttainer from '../component/tabbar/SearchContainer.vue'
 import ShopCarContttainer from '../component/tabbar/ShopCarContainer.vue'
 
+import NewsList from '../component/news/NewsList.vue'
+
+
 var router = new VueRouter({
     routes: [
         // {
@@ -16,10 +19,13 @@ var router = new VueRouter({
         //     ]
         // },
         {path: '/', redirect: '/home'},
-        {path: '/home', component: HomeContttainer},
+        {
+            path: '/home', component: HomeContttainer
+        },
         {path: '/member', component: MemberContttainer},
         {path: '/shopcar', component: ShopCarContttainer},
-        {path: '/search', component: SearchContttainer}
+        {path: '/search', component: SearchContttainer},
+        {path: '/home/newslist', component: NewsList},
     ],
     linkActiveClass: 'mui-active'
 });
