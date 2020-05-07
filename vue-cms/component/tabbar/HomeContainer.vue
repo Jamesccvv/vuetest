@@ -75,17 +75,26 @@
          background-color: red;
      }*/
 
-/*    .mint-swipe-item {
-        &:nth-child(1) {
-            background-color: red;
-        }
+    /*    .mint-swipe-item {
+            &:nth-child(1) {
+                background-color: red;
+            }
 
-        &:nth-child(2) {
-            background-color: green;
-        }
+            &:nth-child(2) {
+                background-color: green;
+            }
 
-        &:nth-child(3) {
-            background-color: blue;
-        }
-    }*/
+            &:nth-child(3) {
+                background-color: blue;
+            }
+        }*/
+
+    .mui-grid-view.mui-grid-9 {
+        border-top: none;
+        background-color: #fff;
+    }
+
+    .mui-grid-view.mui-grid-9 .mui-table-view-cell {
+        border: none;
+    }
 </style>

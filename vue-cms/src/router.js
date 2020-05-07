@@ -15,6 +15,7 @@ var router = new VueRouter({
         //         {path: 'subRegister', component: subRegister}
         //     ]
         // },
+        {path: '/', redirect: '/home'},
         {path: '/home', component: HomeContttainer},
         {path: '/member', component: MemberContttainer},
         {path: '/shopcar', component: ShopCarContttainer},
