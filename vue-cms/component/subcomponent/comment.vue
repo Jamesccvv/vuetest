@@ -5,15 +5,15 @@
 <script>
     export default {
         name: "comment",
-        data(){
+        data() {
             return {
-                comment:[]
+                comment: []
             }
         },
-        created(){
+        created() {
             this.getComment();
         },
-        methods:{
+        methods: {
             getComment() {
 
                 this.comment = [];
@@ -23,7 +23,7 @@
                 // })
             }
         },
-        props:["newsId"]
+        props: ["newsId"]
     }
 </script>
 

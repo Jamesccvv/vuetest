@@ -43,10 +43,10 @@ var vm = new Vue({
 });
 
 
-
-
 /****************一些特殊注意地方*******************/
 
 // 1.图片地址  :src="item.images.small"
 
 // router-link 中的to  如果拼接需要  :to="'/home/newsinfo/'+item.id"
+
+// 福组件给子组件传递参数 :id = 'this.' 子组件中要定义 props: ["newsId"] 来接收使用

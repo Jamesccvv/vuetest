@@ -22,27 +22,28 @@
 <script>
 
     import comment from '../subcomponent/comment.vue'
+
     export default {
         name: "NewsInfo",
-        data(){
+        data() {
             return {
-                id:this.$route.params.id,
-                newsInfo:[]
+                id: this.$route.params.id,
+                newsInfo: []
             }
         },
-        created(){
+        created() {
             this.getNewInfo();
         },
-        methods:{
+        methods: {
             getNewInfo() {
-                this.$http.get('v2/movie/subject/'+this.id+'/reviews',{}).then(result=>{
-                    this.newsInfo= result.body.reviews
+                this.$http.get('v2/movie/subject/' + this.id + '/reviews', {}).then(result => {
+                    this.newsInfo = result.body.reviews
 
                 })
             }
         },
-        components:{ // 注册子组件
-            'comment-box':comment
+        components: { // 注册子组件
+            'comment-box': comment
         }
     }
 </script>
