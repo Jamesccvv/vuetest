@@ -12,7 +12,7 @@ import router from './router.js'
 
 import App from './App.vue'
 
-import { Header ,Swipe, SwipeItem} from 'mint-ui';
+import {Header, Swipe, SwipeItem, Toast} from 'mint-ui';
 
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
@@ -28,16 +28,25 @@ import VueResource from 'vue-resource'
 
 
 // 时间格式化npm i moment
-Vue.filter('dataFormat',function (dataStr,pattern="YYYY-MM-DD HH:mm:ss") {
-   return  moment(dataStr).format(pattern);
+Vue.filter('dataFormat', function (dataStr, pattern = "YYYY-MM-DD HH:mm:ss") {
+    return moment(dataStr).format(pattern);
 })
 
 
 Vue.use(VueResource);
-Vue.http.options.root='https://douban.uieee.com/';
-Vue.http.options.emulateJSON=true;
+Vue.http.options.root = 'https://douban.uieee.com/';
+Vue.http.options.emulateJSON = true;
 var vm = new Vue({
     el: '#app',
     render: c => c(App),
     router
 });
+
+
+
+
+/****************一些特殊注意地方*******************/
+
+// 1.图片地址  :src="item.images.small"
+
+// router-link 中的to  如果拼接需要  :to="'/home/newsinfo/'+item.id"

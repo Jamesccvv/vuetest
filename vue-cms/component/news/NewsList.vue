@@ -3,14 +3,14 @@
         <ul class="mui-table-view mui-table-view-chevron">
 
             <li class="mui-table-view-cell mui-media" v-for="item in newList" :key="item.id">
-                <a class="mui-navigate-right">
+                <router-link class="mui-navigate-right" :to="'/home/newsinfo/'+item.id">
                     <img class="mui-media-object mui-pull-left"
                          :src="item.images.small">
                     <div class="mui-media-body">
                         {{item.title}}
                         <p class="mui-ellipsis">{{item.year}}--{{item.title}}</p>
                     </div>
-                </a>
+                </router-link>
             </li>
 
 
@@ -19,7 +19,7 @@
 </template>
 
 <script>
-    import {Toast} from 'mint-ui';
+
     export default {
         name: "NewsList",
         data(){
