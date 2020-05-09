@@ -12,15 +12,17 @@ import router from './router.js'
 
 import App from './App.vue'
 
-import {Header, Swipe, SwipeItem, Toast} from 'mint-ui';
+import MintUI from 'mint-ui';
 
-Vue.component(Swipe.name, Swipe);
-Vue.component(SwipeItem.name, SwipeItem);
+// Vue.component(Swipe.name, Swipe);
+// Vue.component(SwipeItem.name, SwipeItem);
+
+Vue.use(MintUI);
 
 import '../lib/mui/css/mui.css';
 import '../lib/mui/css/icons-extra.css';
 
-Vue.component(Header.name, Header);
+//Vue.component(Header.name, Header);
 
 // 安装 npm i vue-resource -S
 
@@ -42,6 +44,10 @@ var vm = new Vue({
     router
 });
 
+// 去除严格模式  npm install babel-plugin-transform-remove-strict-mode
+
+// 图片缩略 插件  npm i vue-preview -S
+
 
 /****************一些特殊注意地方*******************/
 
@@ -50,3 +56,11 @@ var vm = new Vue({
 // router-link 中的to  如果拼接需要  :to="'/home/newsinfo/'+item.id"
 
 // 福组件给子组件传递参数 :id = 'this.' 子组件中要定义 props: ["newsId"] 来接收使用
+
+// 使用js 进行路由导航 编程试导航
+// 1.this.$router.push()
+// 2.this.$router.push({path:''})
+// 3.this.$router.push({name:'home',params:{id:123}}) name 来自路由后的自定义名字
+
+
+// 添加样式判断 :class="{full:isfull}"

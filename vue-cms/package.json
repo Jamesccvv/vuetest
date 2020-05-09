@@ -8,6 +8,7 @@
     "node_modules"
   ],
   "dependencies": {
+    "babel-plugin-transform-remove-strict-mode": "0.0.2",
     "bootstrap": "^4.4.1",
     "html-webpack-plugin": "^4.2.1",
     "jquery": "^3.5.0",

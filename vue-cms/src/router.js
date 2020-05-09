@@ -30,7 +30,7 @@ var router = new VueRouter({
         {path: '/search', component: SearchContttainer},
         {path: '/home/newslist', component: NewsList},
         {path: '/home/newsinfo/:id', component: NewsInfo},
-        {path: '/home/photo', component: photoList},
+        {path: '/home/photo', component: photoList, name: 'photo'},
     ],
     linkActiveClass: 'mui-active'
 });
