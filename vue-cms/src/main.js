@@ -55,7 +55,7 @@ var vm = new Vue({
 
 // router-link 中的to  如果拼接需要  :to="'/home/newsinfo/'+item.id"
 
-// 福组件给子组件传递参数 :id = 'this.' 子组件中要定义 props: ["newsId"] 来接收使用
+// 父组件给子组件传递参数 :id = 'this.' 子组件中要定义 props: ["newsId"] 来接收使用
 
 // 使用js 进行路由导航 编程试导航
 // 1.this.$router.push()
@@ -64,3 +64,9 @@ var vm = new Vue({
 
 
 // 添加样式判断 :class="{full:isfull}"
+
+// 只要想要在Vue中直接操作DOM元素，就必须用ref属性进行注册 ref="ball"  获取：this.$refs.ball. 相当于获取dom
+
+// es6 拼接字符串 const test ='' $({test}px)
+
+// 子组件向父组件传递 （事件调度机制）
