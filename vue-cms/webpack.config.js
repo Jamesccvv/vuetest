@@ -7,10 +7,11 @@ const webpack = require('webpack');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+    mode: 'development', // 指定构建模式 production
     entry: path.join(__dirname, './src/main.js'),//入口
     output: {
         path: path.join(__dirname, './mui'),
-        filename: 'bundle.js'
+        filename: 'bundle.js' // 输出后的名字
     },
     devServer: {
         open: true,
@@ -30,20 +31,22 @@ module.exports = {
             template: path.join(__dirname, 'src/index.html'),// 指定
             //filename:'index1.html' // 生成内存中的
             filename: 'index.html', // 生成内存中的
-            hash:true,
+            hash: true,
         })
     ],
     module: {
         rules: [
-            {test: /\.css$/, use: ['style-loader', 'css-loader']},// 从右到左调用  loader 根据webpack版本不同 1可以不带其余的必须带
+            {test: /\.css$/, use: ['style-loader', 'css-loader','postcss-loader']},// 从右到左调用  loader 根据webpack版本不同 1可以不带其余的必须带
             {test: /\.less$/, use: ['style-loader', 'css-loader', 'less-loader']},
             {test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader']},
-            {test: /\.(jpg|png)$/, use: 'url-loader?limit=200'}, // 处理图片路径
+            {test: /\.(jpg|png)$/, use: 'url-loader?limit=200'}, // 处理图片路径 limit 多少kb 只要小于这个数才能转
             // 支持参数 什么时候转base64  &[hash:8]-name=[name].[ext] 保持原有的图片名，防止重复,连接个hash值也可以防止重复
 
             {test: /\.(ttf|eot|woff|woff2)$/, use: 'url-loader'}, // 处理字体
-            {test:/\.js$/,use:'babel-loader',exclude:/node_modules/},
-            {test:/\.vue$/,use:['vue-loader'],exclude:/node_modules/}
+            {test: /\.js$/, use: 'babel-loader', exclude: /node_modules/}, // 排除node_modules
+            {test: /\.vue$/, use: ['vue-loader'], exclude: /node_modules/}
         ]
     }
 };
+
+//"dev": "webpack-dev-server --open --port 4000 --hot"  自动打包

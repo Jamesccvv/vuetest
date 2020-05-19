@@ -6,6 +6,12 @@ const webpack = require('webpack');
 // 内存中生成HTML 插件
 const htmlWebpackPlugin = require('html-webpack-plugin');
 
+const htmlPlugin = new htmlWebpackPlugin({
+    template: path.join(__dirname, 'index.html'),// 指定
+    //filename:'index1.html' // 生成内存中的
+    filename: 'index.html', // 生成内存中的
+    hash:true,
+})
 module.exports = {
     entry: path.join(__dirname, './src/main.js'),//入口
     output: {
@@ -19,18 +25,19 @@ module.exports = {
         //contentBase: 'src'
     },
     plugins: [
+        htmlPlugin,
         new webpack.HotModuleReplacementPlugin(),
         // new webpack.optimize.UglifyJsPlugin({
         //     compress: {
         //         drop_debugger: true,
         //     }
         // }),
-        new htmlWebpackPlugin({
-            template: path.join(__dirname, 'index.html'),// 指定
-            //filename:'index1.html' // 生成内存中的
-            filename: 'index.html', // 生成内存中的
-            hash:true,
-        })
+        // new htmlWebpackPlugin({
+        //     template: path.join(__dirname, 'index.html'),// 指定
+        //     //filename:'index1.html' // 生成内存中的
+        //     filename: 'index.html', // 生成内存中的
+        //     hash:true,
+        // })
     ],
     module: {
         rules: [
