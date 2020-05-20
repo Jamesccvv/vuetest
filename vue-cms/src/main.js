@@ -70,3 +70,8 @@ var vm = new Vue({
 // es6 拼接字符串 const test ='' $({test}px)
 
 // 子组件向父组件传递 （事件调度机制）
+
+// 加载css 的兼容前缀插件  npm i postcss-loader autoprefixer -D
+
+//postcss.config.js  内容：
+// const autofix = require('autoprefixer');module.exports = {plugins:{autofix}} //挂载
