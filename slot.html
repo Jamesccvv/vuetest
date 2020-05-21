@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./lib/vue.min.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<style type="text/css">
+    .v-enter, .v-leave-to {
+        opacity: 0;
+        transform: translate(150px)
+    }
+
+    .v-enter-active, .v-leave-active {
+
+        transition: all .25s ease;
+    }
+
+    .my-enter, .my-leave-to {
+        opacity: 0;
+        transform: translateY(50px)
+    }
+
+    .my-enter-active, .my-leave-active {
+
+        transition: all .25s ease;
+    }
+
+    .current {
+        color: red;
+    }
+</style>
+<body>
+<div id="app">
+    <fruit :list="list">
+        <!--自定义的名字-->
+        <template slot-scope="slotProps">
+            <strong v-if="slotProps.info.id==2" class="current">{{slotProps.info.name}}</strong>
+            <span v-else>{{slotProps.info.name}}</span>
+        </template>
+    </fruit>
+</div>
+</body>
+<script>
+    //     Vue.component('fruit', {
+    //         props: ['list'],
+    //         template: `<div>
+    //             <li v-for="item in list" :key="item.id">{{item.name}}</li>
+    //
+    // </div>`
+    //     });
+
+    Vue.component('fruit', {
+        props: ['list'],
+        template: `<div>
+            <li v-for="item in list" :key="item.id">
+            <slot :info="item">
+            {{item.name}}
+            </slot>
+            </li>
+
+</div>`
+    });
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            list: [{id: 1, name: 'apple'}, {id: 2, name: 'origin'}, {id: 3, name: 'apple2'}]
+        },
+        methods: {}
+    });
+</script>
+</html>
