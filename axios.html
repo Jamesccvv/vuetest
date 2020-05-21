@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./lib/vue.min.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="./lib/axios.js"></script>
+
+</head>
+<body>
+<div id="app">
+
+</div>
+</body>
+<script>
+    // 请求拦截器
+    axios.interceptors.request.use(function (config) {
+        config.header.token = '你好'
+        return config;
+    }, function (err) {
+        //处理错误信息
+    })
+
+    // 返回拦截器
+    axios.interceptors.response.use(function (res) {
+
+        return res.data; // 这里只是处理不是拿到数据
+    }, function (err) {
+        //处理错误信息
+    })
+
+    axios.get('url').then(function () {
+
+    });
+
+</script>
+</html>
