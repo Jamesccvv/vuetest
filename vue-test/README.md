@@ -1,4 +1,3 @@
-# 这个只是个练习
 # vue-test
 
 ## Project setup
